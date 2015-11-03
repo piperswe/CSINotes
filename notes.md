@@ -758,15 +758,57 @@
 
     | Operator           | Symbol |
     |--------------------|--------|
-    | Addition           | +      |
-    | Subtraction        | -      |
-    | Multiplication     | *      |
-    | Division           | /      |
-    | Remainder (Modulo) | %      |
+    | Addition           | `+`    |
+    | Subtraction        | `-`    |
+    | Multiplication     | `*`    |
+    | Division           | `/`    |
+    | Remainder (Modulo) | `%`    |
 
  - If either or both operands are floating point values, then the result is a floating point value
 
-#### 
+#### Division and Remainder
+
+ - If both operands to the division operator (`/`) are integers, the result is an integer (the fractional part is discarded)
+
+    ```java
+    assert(14 / 3 == 4);
+    assert(8 / 12 == 0);
+    ```
+
+ - The remainder operator (`%`) returns the remainder after dividing the first operand by the second
+
+    ```java
+    assert(14 % 3 == 2);
+    assert(8 % 12 == 8);
+    ```
+
+#### Quick Check
+
+What are the results of the following expressions?
+
+| Expression   | Result |
+|--------------|--------|
+| `12 / 2`     | `6`    |
+| `12.0 / 2.0` | `6.0`  |
+| `10 / 4`     | `2`    |
+| `10 / 4.0`   | `2.5`  |
+| `4 / 10`     | `0`    |
+| `4.0 / 10`   | `0.4`  |
+| `12 % 3`     | `0`    |
+| `10 % 3`     | `1`    |
+| `3 % 10`     | `3`    |
+
+#### Operator Precedence
+
+ - Operators can be combined into larger expressions
+
+    ```java
+    result = total + count / max - offset;
+    ```
+
+ - Operators have a well-defined precedence which determines the order in which they are evaluated
+ - Multiplication, division, and remainder are evaluated before addition, subtraction, and string concatenation
+ - Arithmetic operators with the same precedence are evaluated from left to right, but parentheses can be used to force the evaluation order
 
 > Written with [StackEdit](https://stackedit.io/).  
 > Some (most?) content is copyright &copy; 2014 Pearson Education, Inc.
