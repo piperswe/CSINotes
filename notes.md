@@ -618,5 +618,155 @@
    System.out.println("\"Thank you all for coming to my house tonight,\" he said mysteriously."); // OUTPUT: "Thank you all for coming to my house tonight," he said mysteriously\n
    ```
 
-> Written with [StackEdit](https://stackedit.io/).
+### 2.2: Variables and Declarations
+
+#### Variables
+
+ - A _variable_ is a name for a location in memory that holds a value
+ - A _variable declaration_ specifies the variable's name and the type of information that it will hold
+ - 
+
+   ```java
+   int sum;
+   int base, max;
+   ```
+
+#### Variable Initialization
+
+ - A variable can be given an initial value in the declaration
+   
+   ```java
+   int sum = 0;
+   int base = 32, max = 149;
+   ```
+
+ - When a variable is referenced in a program, its current value is used.
+ - See `PianoKeys.java`
+
+#### Assignment
+
+ - An _assignment statement_ changes the value of a variable
+ - The assignment operator is the `=` sign
+   
+   ```java
+   total = 55;
+   ```
+   
+ - The value that was in `total` is overwritten
+ - You can only assign a value to a variable that is consistent with the variable's declared type
+ - See `Geometry.java`
+
+#### Constants
+
+ - A _constant_ is an identifier that is similar to a variable except that it holds the same value during its entire existence
+ - As the name implies, it is constant, not variable
+ - The compiler will issue an error if you try to change the value of a constant
+ - In Java, we use the `final` modifier to declare a constant
+   
+   ```java
+   final int MIN_HEIGHT = 69;
+   ```
+   
+ - Constants are useful for three important reasons
+ - First, they give meaning to otherwise unclear literal values
+	 - Example: `MAX_LOAD` means more than the literal 250
+ - Second, they facilitate program maintenance
+	 - If a constant is used in multiple places, its value need only be set in one place
+ - Third, they formally establish that a value should not change, avoiding inadvertent errors by other programmers
+
+### 2.3: Primitive Data Types
+
+#### Primitive Data
+
+ - There are eight primitive data types in Java
+ - Four of them represent integers:
+    - `byte`, `short`, `int`, `long`
+ - Two of them represent floating point numbers:
+    - `float`, `double`
+ - One of them represents characters:
+    - `char`
+ - And one of them represents boolean values:
+    - `boolean`
+ - They actually store the value that you assign, as opposed to a reference.
+
+#### Numeric Primitive Data
+
+ - The difference between the numeric primitive types is their size and the values that they can store:
+    
+    | Type     | Storage | Min Value                               | Max Value   |
+    |----------|---------|-----------------------------------------|-------------|
+    | `byte`   | 8 bits  | -128                                    | 127         |
+    | `short`  | 16 bits | -32768                                  | 32767       |
+    | `int`    | 32 bits | -2147483648                             | 2147483647  |
+    | `long`   | 64 bits | < -9 * 10^18                            | \> 9 * 10^18 |
+    | `float`  | 32 bits | +/- 3.4*10^38 with 7 significant digits |             |
+    | `double` |         | +/- 1.7*10^308 with 15 significant digits |             |
+
+#### Characters
+
+ - A `char` variable stores a single variable
+ - Character literals are delimited by single quotes:
+
+    ```java
+    'a', 'X', '7', '$', ',', '\n'
+    ```
+    
+ - Example declarations:
+
+    ```java
+    char topGrade = 'A';
+    char terminator = ';', separator = ' ';
+    ```
+
+#### Character Set
+
+ - A _character set_ is an ordered list of characters, with each character corresponding to a unique number
+ - A `char` variable in Java can store any character from the _Unicode character set_
+ - The Unicode character set uses sixteen bits per character, allowing for 65535 unique characters
+ - It is an international character set, containing symbols and characters from many world languages
+ - `'A'`: `65`
+ - `'a'`: `97`
+ - `'0'`: `48`
+
+#### Characters
+
+ - The _ASCII character set_ is older and smaller than Unicode, but is still quite popular
+ - The ASCII characters are a subset of the Unicode character set, including:
+    - uppercase letters
+    - lowercase letters
+    - punctuation
+    - digits
+    - special symbols
+    - control characters
+
+#### Boolean
+
+ - A `boolean` value represents a true or false condition
+ - The reserved words `true` and `false` are the only valid values for a boolean type
+ -  
+
+    ```java
+    boolean done = false;
+    ```
+
+ - A `boolean` variable can also be used to represent any two states, such as a light bulb being on or off
+
+#### Expressions
+
+ - An _expression_ is a combination of one or more operators and operands
+ - _Arithmetic expressions_ compute numeric results and make use of the arithmetic operators:
+
+    | Operator           | Symbol |
+    |--------------------|--------|
+    | Addition           | +      |
+    | Subtraction        | -      |
+    | Multiplication     | *      |
+    | Division           | /      |
+    | Remainder (Modulo) | %      |
+
+ - If either or both operands are floating point values, then the result is a floating point value
+
+#### 
+
+> Written with [StackEdit](https://stackedit.io/).  
 > Some (most?) content is copyright &copy; 2014 Pearson Education, Inc.
